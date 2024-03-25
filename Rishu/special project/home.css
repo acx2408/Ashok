@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Roboto", serif;
+    color: #fff;
+    text-align: center;
+  }
+
+  #video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+  }
+  
+  #video-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+
+  
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.special-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #6b0f9b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.special-button:hover {
+    background-color: #6b0f9b;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orelo-sw-db", serif;
+    pointer-events: all;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.social {
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    right: 25px;
+    color: #fff;
+    opacity: 0.4;
+}
+
+.social a {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.social svg {
+    --fill: #fff;
+    width: 100px;
+    height: 100px;
+}
+
+.cursor {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
+    transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
+    display: none;
+    pointer-events: none;
+}
+
+@media (pointer: fine) {
+    .cursor {
+        display: block;
+    }
+}
+
+.cursor2 {
+    --size: 2px;
+    transition-duration: 0.7s;
+}
+
+.fade-in {
+    opacity: 0; /* Initially make the content transparent */
+    animation: fadeIn 4s ease-in-out forwards; /* Apply the fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with transparency */
+    }
+    to {
+      opacity: 1; /* End with full opacity */
+    }
+  }
+  
